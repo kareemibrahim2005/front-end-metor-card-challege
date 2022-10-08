@@ -25,23 +25,7 @@ body {
     padding: 20px;
     border-radius: 15px;
 }
-.profile {
-    border-top: 1px hsl(215, 32%, 27%) solid;
-    display: flex;
-    width: 100%;
-    color: hsl(215, 51%, 70%);
-    padding: 10px;
-}
-.img {
-    width: 100%;
-    border-radius: 10px;
-    position: relative;
-}
-.pic {
-    width: 100%;
-    border-radius: inherit;
-    height: 100%;
-}
+
 .icon {
     display: flex;
     justify-content: space-between;
@@ -55,9 +39,20 @@ body {
 .icon-2 {
     display: inline-block;
 }
+.profile {
+    border-top: 1px hsl(215, 32%, 27%) solid;
+    display: flex;
+    width: 100%;
+    color: hsl(215, 51%, 70%);
+    padding: 10px;
+}
 .profile-pic {
     width: 50px;
     margin-right: 10px;
+}
+span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 p {
     color: hsl(215, 51%, 70%);
@@ -74,12 +69,20 @@ h3 {
 h4 {
     display: inline-block;
 }
-span:hover {
-    color: hsl(178, 100%, 50%);
-    cursor: pointer;
-}
+
 
 /* -------- Hover effect --------- */
+.pic {
+    width: 100%;
+    border-radius: inherit;
+    height: 100%;
+}
+
+.img {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
 
 .img::before {
     content: "";
@@ -107,8 +110,6 @@ span:hover {
 .img:hover::before {
     display: block;
 }
-
-
 
 @media only screen and (max-width: 375px) {
     .box {
