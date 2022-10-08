@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+body {
+    background-color: hsl(217, 54%, 11%);
+    color: white; 
+    width: 1440px;
+    font-size: 16px;
+    font-family: Outfit;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.box {
+    background-color: hsl(216, 50%, 16%);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.profile {
+    border-top: 1px hsl(215, 32%, 27%) solid;
+    display: flex;
+    width: 100%;
+    color: hsl(215, 51%, 70%);
+    padding: 10px;
+}
+.img {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+.pic {
+    width: 100%;
+    border-radius: inherit;
+    height: 100%;
+}
+.icon {
+    display: flex;
+    justify-content: space-between;
+    color: hsl(215, 51%, 70%);
+    padding-bottom: 15px;
+}
+.icon-1 {
+    display: inline-block;
+    color: hsl(178, 100%, 50%);
+}
+.icon-2 {
+    display: inline-block;
+}
+.profile-pic {
+    width: 50px;
+    margin-right: 10px;
+}
+p {
+    color: hsl(215, 51%, 70%);
+}
+.eth {
+    display: inline-block;
+}
+.clock {
+    display: inline-block;
+}
+h3 {
+    display: inline-block;
+}
+h4 {
+    display: inline-block;
+}
+span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+/* -------- Hover effect --------- */
+
+.img::before {
+    content: "";
+    width: 100%;
+    background-color: hsl(178, 100%, 50%);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.4;
+    border-radius: 10px;
+    display: none;
+}
+.img::after {
+    content: url(/images/icon-view.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: none;
+}
+.img:hover::after {
+    display: block; 
+}
+.img:hover::before {
+    display: block;
+}
+
+
+
+@media only screen and (max-width: 375px) {
+    .box {
+      width: 241px;
+      height: 510px;
+    }
+  }
+  @media only screen and (min-width: 1440px) {
+    .box {
+        width: 345px;
+    }
+  }
